@@ -1,0 +1,29 @@
+//Vehicle Parking Fee System
+#include <iostream>
+
+int main() {
+    int vehicleType; // 1 for Bike, 2 for Car
+    int hours;
+    int totalFee = 0;
+
+    std::cout << "--- Smart Parking System ---" << std::endl;
+    std::cout << "Vehicle Type select  (1 = Bike, 2 = Car): ";
+    std::cin >> vehicleType;
+
+    std::cout << "How many hours? (Enter hours): ";
+    std::cin >> hours;
+
+    if (vehicleType == 1) {
+    
+        totalFee = 20 + (hours - 1) * 10;
+    } else if (vehicleType == 2) {
+        
+        totalFee = 40 + (hours - 1) * 20;
+    } else {
+        std::cout << "You choose incorrect option!" << std::endl;
+        return 0; 
+    }
+
+    std::cout << "Parking fees is:" << totalFee << std::endl;
+    return 0;
+}
